@@ -40,36 +40,45 @@ Rabbit Forms is a multi-tenant form builder SaaS targeting deployment on Vercel 
 
 ## Documentation
 
-- **[Implementation Plan](./RABBIT_FORMS_IMPLEMENTATION_PLAN.md)** - Complete technical specification, database schema, and development roadmap
-- **[Original Plan](./PLAN.md)** - Initial planning artifacts and task stubs
+### Setup Guides
+- **[⚡ Quick Start](./QUICKSTART.md)** - Get running in 5 minutes!
+- **[🔧 Environment Setup](./ENV_SETUP_GUIDE.md)** - Complete guide for local & Vercel environment variables
+- **[📚 Getting Started](./GETTING_STARTED.md)** - Detailed setup with Supabase configuration
+
+### Planning & Architecture
+- **[📋 Implementation Plan](./RABBIT_FORMS_IMPLEMENTATION_PLAN.md)** - Complete technical specification, database schema, and development roadmap
+- **[✅ Setup Complete](./SETUP_COMPLETE.md)** - What's been set up and next steps
+- **[📝 Original Plan](./PLAN.md)** - Initial planning artifacts and task stubs
 
 ## Quick Start
 
-### Prerequisites
+**Want to get started quickly?** See the [⚡ Quick Start Guide](./QUICKSTART.md) for a 5-minute setup!
 
-- Node.js 18+ and npm/pnpm/yarn
-- Supabase account (free tier works)
-- Vercel account (optional, for deployment)
-
-### Installation
+### Basic Setup
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/rabbit-forms.git
-cd rabbit-forms
-
-# Install dependencies
+# 1. Clone and install
+git clone https://github.com/durgesh0505/Form-Builder.git
+cd Form-Builder
 npm install
 
-# Copy environment variables
-cp .env.example .env.local
+# 2. Generate encryption key
+npm run generate-key
 
-# Set up your Supabase credentials in .env.local
-# Then run the development server
+# 3. Set up environment
+cp .env.example .env.local
+# Edit .env.local with your Supabase credentials
+
+# 4. Verify configuration
+npm run check-env
+
+# 5. Run the app
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+**Need help?** See [ENV_SETUP_GUIDE.md](./ENV_SETUP_GUIDE.md) for detailed instructions.
 
 ## Project Status
 
